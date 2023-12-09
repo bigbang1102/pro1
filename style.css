@@ -322,7 +322,54 @@ form .btn2{
     color: #ff004f;
     text-decoration: none;
 }
-/* -----------------css for small screens--------- */
+/* -----------------css for small screens---------
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
+.mou{
+    display: block;
+    margin: 5px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 10px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #d36262;
+    transition: background 0.5s;
+}
+.mou:hover{
+    background: #ff004f;
+}
+/* saddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
+.mov{
+    display: block;
+    margin: 5px auto;
+    width: fit-content;
+
+    padding: 10px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #f8f8f8;
+
+}
+.abc{
+    display:block;
+    margin: 5px auto;
+    width: fit-content;
+    border-radius: 10px;
+    width: 120vh;
+    height: 50vh;
+    
+}
+.mta{
+    display: block;
+    margin: 5px auto;
+    width: fit-content;
+
+    padding: 10px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000000;
+
+}
 nav .fas{
     display: none;
 }
@@ -332,7 +379,7 @@ nav .fas{
         background-image: url(images/phone-background.png);
     }
     .header-text{
-        margin-top: 100%;
+        margin-top: 50%;
         font-size: 16px;
     }
     .header-text h1{
@@ -350,7 +397,7 @@ nav .fas{
         width: 200px;
         height: 100vh;
         padding-top: 50px;
-        z-index: 2;
+        z-index: 1;
         transition: right 0.5s;
     }
     nav ul li{
@@ -370,10 +417,10 @@ nav .fas{
         flex-basis: 100%;
     }
     .about-col-1{
-        margin-bottom: 30px;
+        margin-bottom: 150px;
     }
     .about-col-2{
-        font-size: 14px;
+        font-size: 140px;
     }
     .tab-links{
         font-size: 16px;
@@ -390,4 +437,13 @@ nav .fas{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+.violet{
+    font-size: 150px;
+    color: #ff004f;
+    padding-top: 20%;
+}
+.jon{
+margin: auto;
+width:250px;
 }

@@ -19,13 +19,15 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="script.html">javascript+API</a></li>
                 <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
             <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p> Develop</p>
-            <h1>Hi, I'm <span>Phongphorn</span><br>I come from Maha Sarakham Rajabhat University</h1>
+            <h1>Hi, I'm <span>Phongphorn</span><br>
+                I come from Maha Sarakham Rajabhat University</h1>
         </div>
     </div>
 </div>
@@ -135,6 +137,7 @@
     <div class="container">
         <div class="row">
             <div class="contact-left">
+                <h1>API</h1>
                 <h1 class="sub-title">Contact Me</h1>
                 <p><i class="fas fa-paper-plane"></i> pongpornbig@gmail.com</p>
                 <p><i class="fas fa-phone-square-alt"></i> 0803785162</p>
@@ -147,16 +150,25 @@
                 <a href="images/lop.pdf" download class="btn btn2">Download coding</a>
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet">
+                <form  
+                method="POST" 
+                action="https://script.google.com/macros/s/AKfycbwlHBoTcE9-F4KUWaxEE5x_QI-8Szv40tmFNsMGH0m_XoxW1fvLU26HAItJtu2GQdJV/exec">
                     <input type="text" name="Name"placeholder="Your Name" required>
                     <input type="email" name="Email"placeholder="Your Email" required>
                     <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
+
                 </form>
+              
                 <span id="msg"></span>
             </div>
         </div>
     </div>
+    <div class="w3-center w3-padding-24">
+        <iframe style="width: 500vh;height: 250vh; height: auto;"
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQgmPgLri5kF5HOgKUtKY45M-Pd36fOFck40VzZqR3WoZ8usdf-ka1BuuDfbQH5Jf8dewNXdkB3Fvnt/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+        ></iframe>
+      </div>
     <div class="copyright">
         <p>Copyright © bigbang. Made wtih <i class="fas fa-heart"></i> by <a href="https://www.facebook.com/bigbang.ch.1">Easy Tutorials</a></p>
     </div>
@@ -194,23 +206,5 @@
     }
 
 </script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzNQQKvzc3SrqwU35GRU5-IZhnb76bmw_gSApZkMfT4Yn5DWFnTBOkfP3xWheglYb6W/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.resent()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
 </body>
 </html>
